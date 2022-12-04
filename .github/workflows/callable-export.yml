@@ -55,7 +55,7 @@ env:
 
 jobs:
   linux:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     if: contains(inputs.platforms, 'linux')
     container:
       image: ${{ inputs.image }}
@@ -65,7 +65,7 @@ jobs:
         uses: bend-n/godot-actions/.github/actions/export-linux@main
 
   windows:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     if: contains(inputs.platforms, 'windows')
     container:
       image: ${{ inputs.image }}
@@ -75,7 +75,7 @@ jobs:
         uses: bend-n/godot-actions/.github/actions/export-windows@main
 
   mac:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     if: contains(inputs.platforms, 'mac')
     container:
       image: ${{ inputs.image }}
@@ -85,7 +85,7 @@ jobs:
         uses: bend-n/godot-actions/.github/actions/export-mac@main
 
   web:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     if: contains(inputs.platforms, 'web')
     container:
       image: ${{ inputs.image }}
@@ -97,7 +97,7 @@ jobs:
           github-pages: ${{ inputs.github-pages }}
 
   android:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     if: contains(inputs.platforms, 'android')
     container:
       image: ${{ inputs.image }}
