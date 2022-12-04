@@ -19,14 +19,11 @@ runs:
         lfs: true
         submodules: recursive
 
-    - name: Get lsb-release
-      run: echo "::group::Setup python" && apt-get update && apt-get install -y lsb-release && apt-get clean all && echo "::endgroup::"
-      shell: bash
-
     - name: Setup python
       uses: actions/setup-python@v4
       with:
         python-version: "3.9"
+        cache: pip
 
     - name: Setup godot
       run: |
